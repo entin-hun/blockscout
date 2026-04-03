@@ -119,6 +119,7 @@ defmodule Explorer.Application do
         configure_mode_dependent_process(Explorer.Utility.VersionConstantsUpdater, :indexer),
         configure_mode_dependent_process(Explorer.Market.Fetcher.Coin, :api),
         configure_mode_dependent_process(Explorer.Market.Fetcher.Token, :indexer),
+        configure_mode_dependent_process(Explorer.Market.Fetcher.TokenList, :indexer),
         configure_mode_dependent_process(Explorer.Market.Fetcher.History, :indexer),
         configure_mode_dependent_process(Explorer.Market, :api),
         configure(Explorer.ChainSpec.GenesisData),
